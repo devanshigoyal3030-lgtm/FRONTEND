@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="100%" height="100%">
+  <rect width="900" height="650" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="12" rx="16"/>
+  <rect x="25" y="25" width="850" height="600" fill="none" stroke="#0078D4" stroke-width="3" rx="8"/>
+  <rect x="35" y="35" width="830" height="580" fill="none" stroke="#93C5FD" stroke-width="1" stroke-dasharray="6 6"/>
+
+  <!-- Microsoft Logo Badge -->
+  <g transform="translate(425, 80)">
+    <rect x="0" y="0" width="22" height="22" fill="#F25022"/>
+    <rect x="26" y="0" width="22" height="22" fill="#7FBA00"/>
+    <rect x="0" y="26" width="22" height="22" fill="#00A4EF"/>
+    <rect x="26" y="26" width="22" height="22" fill="#FFB900"/>
+  </g>
+
+  <text x="450" y="175" font-family="'Georgia', serif" font-size="28" font-weight="700" fill="#0078D4" text-anchor="middle">MICROSOFT CERTIFIED</text>
+  <text x="450" y="210" font-family="sans-serif" font-size="14" font-weight="600" fill="#64748B" letter-spacing="2" text-anchor="middle">THIS CERTIFIES THAT</text>
+
+  <text x="450" y="270" font-family="'Georgia', serif" font-size="38" font-weight="700" fill="#0F172A" text-anchor="middle">Devanshi Goyal</text>
+  <line x1="250" y1="290" x2="650" y2="290" stroke="#CBD5E1" stroke-width="2"/>
+
+  <text x="450" y="335" font-family="sans-serif" font-size="16" fill="#334155" text-anchor="middle">has successfully achieved the certification</text>
+  
+  <rect x="180" y="365" width="540" height="60" rx="10" fill="#F0F9FF" stroke="#BAE6FD"/>
+  <text x="450" y="403" font-family="sans-serif" font-size="22" font-weight="700" fill="#0369A1" text-anchor="middle">Microsoft Azure Fundamentals (AZ-900)</text>
+
+  <text x="450" y="465" font-family="sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Issued by Microsoft Corporation</text>
+
+  <!-- Signatures / Footer -->
+  <line x1="180" y1="560" x2="360" y2="560" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="270" y="580" font-family="sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Satya Nadella, CEO</text>
+
+  <circle cx="450" cy="540" r="30" fill="#EFF6FF" stroke="#0078D4" stroke-width="2"/>
+  <text x="450" y="546" font-family="sans-serif" font-size="11" font-weight="800" fill="#0078D4" text-anchor="middle">CERTIFIED</text>
+
+  <line x1="540" y1="560" x2="720" y2="560" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="630" y="580" font-family="sans-serif" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Devanshi Goyal</text>
+</svg>

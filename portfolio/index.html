@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devanshi Goyal | Full-Stack Development Student</title>
+  <meta name="description"
+    content="Personal portfolio of Devanshi Goyal, a Full-Stack Development student in Computer Science Engineering at GLA University.">
+
+  <!-- Modern Typography: Plus Jakarta Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        Devanshi<span>.Goyal</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#hackathons" class="nav-link">Hackathons</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <span class="nav-brand">Devanshi<span>.Goyal</span></span>
+      <button class="mobile-drawer-close" id="mobile-drawer-close">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="#home" class="nav-link mobile-link">Home</a></li>
+      <li><a href="#about" class="nav-link mobile-link">About</a></li>
+      <li><a href="#skills" class="nav-link mobile-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link mobile-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link mobile-link">Certifications</a></li>
+      <li><a href="#hackathons" class="nav-link mobile-link">Hackathons</a></li>
+      <li><a href="#education" class="nav-link mobile-link">Education &amp; Training</a></li>
+      <li><a href="#contact" class="nav-link mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero / Landing Section (Typography & Creative Layout - No Photo Here) -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Full-Stack Development Student
+        </div>
+        <h1 class="hero-name">Devanshi Goyal</h1>
+        <h2 class="hero-title">
+          <span>Computer Science Engineering Student</span>
+        </h2>
+        <p class="hero-bio">
+          I am a CSE student enthusiastic about building clean, responsive web applications and mastering full-stack
+          technologies. Focused on practical software principles, web architecture, and continuous learning by building
+          projects.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="assets/resume-placeholder.pdf" class="btn btn-secondary" target="_blank"
+            download="Devanshi_Goyal_Resume.pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+        <div class="hero-socials">
+          <span class="social-label">Profiles:</span>
+          <div class="social-links-list">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+              aria-label="GitHub Profile" title="GitHub">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+              aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" class="social-btn"
+              aria-label="LeetCode Profile" title="LeetCode">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.374 1.374 0 0 0-.07 1.878l.07.073 4.887 4.888a1.374 1.374 0 0 0 1.944 0l.07-.073.073-.072a1.375 1.375 0 0 0 0-1.944l-3.987-3.988 4.356-4.355A1.374 1.374 0 0 0 13.483 0zm-6.13 8.358a1.375 1.375 0 0 0-1.944 0l-4.975 4.976a5.5 5.5 0 0 0 0 7.778l.24.238a5.5 5.5 0 0 0 7.777 0l4.976-4.976a1.375 1.375 0 0 0-1.944-1.944l-4.976 4.976a2.75 2.75 0 0 1-3.889 0l-.24-.239a2.75 2.75 0 0 1 0-3.889l4.976-4.976a1.375 1.375 0 0 0 0-1.944zM16.42 12.33a1.375 1.375 0 0 0-1.375 1.375v5.5a1.375 1.375 0 0 0 2.75 0v-5.5a1.375 1.375 0 0 0-1.375-1.375z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Creative Student Developer Focus Card -->
+      <div class="hero-feature-card">
+        <div class="hero-card-header">
+          <div class="card-header-dots">
+            <span class="card-dot dot-red"></span>
+            <span class="card-dot dot-yellow"></span>
+            <span class="card-dot dot-green"></span>
+          </div>
+          <span class="card-header-label">Developer Focus</span>
+        </div>
+
+        <div class="hero-tech-highlights">
+          <div class="tech-highlight-item">
+            <div class="highlight-icon">💻</div>
+            <div>
+              <div class="highlight-text-title">Full-Stack Web Development</div>
+              <div class="highlight-text-sub">HTML, CSS, JavaScript, React.js &amp; Node.js</div>
+            </div>
+          </div>
+
+          <div class="tech-highlight-item">
+            <div class="highlight-icon">⚡</div>
+            <div>
+              <div class="highlight-text-title">Core Programming</div>
+              <div class="highlight-text-sub">Java, Python, C, Data Structures</div>
+            </div>
+          </div>
+
+          <div class="tech-highlight-item">
+            <div class="highlight-icon">🗄️</div>
+            <div>
+              <div class="highlight-text-title">Database Systems &amp; Tools</div>
+              <div class="highlight-text-sub">MySQL, MongoDB, Git &amp; VS Code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee / Moving Text Section -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span class="marquee-item">Full-Stack Development <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Web Development <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Java <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">JavaScript <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">React <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Python <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Building Projects <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Learning By Building <span class="marquee-bullet">•</span></span>
+      </div>
+      <!-- Duplicate content for infinite smooth seamless loop -->
+      <div class="marquee-content" aria-hidden="true">
+        <span class="marquee-item">Full-Stack Development <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Web Development <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Java <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">JavaScript <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">React <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Python <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Building Projects <span class="marquee-bullet">•</span></span>
+        <span class="marquee-item">Learning By Building <span class="marquee-bullet">•</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me Section (Profile Photo Appears ONLY Here) -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Background &amp; Learning Journey</h2>
+        <p class="section-subtitle">A simple introduction to my academic path, interests, and engineering goals.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-grid">
+          <!-- Real Profile Photo from photo/selfimage1.jpeg -->
+          <div class="about-photo-frame">
+            <img src="photo/selfimage1.jpeg" alt="Devanshi Goyal Profile Photo" id="about-profile-img">
+          </div>
+
+          <div class="about-content">
+            <h3>Hello, I'm Devanshi Goyal 👋</h3>
+            <p>
+              I am currently pursuing my B.Tech degree in Computer Science &amp; Engineering at GLA University. My
+              technical journey began with core programming languages like Java and C, which provided a strong baseline
+              in logic, data structures, and problem-solving.
+            </p>
+            <p>
+              As I advanced in my studies, I developed a strong passion for Web Development. I enjoy bringing user
+              interface concepts to life with HTML, CSS, JavaScript, and React.js, while exploring backend architecture
+              using Node.js, Express.js, and databases.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h4>🎯 Academic Focus</h4>
+                <p>Computer Science &amp; Full-Stack Web Development</p>
+              </div>
+              <div class="highlight-box">
+                <h4>💻 Core Tech</h4>
+                <p>Java, Python, React.js, Node.js &amp; Databases</p>
+              </div>
+              <div class="highlight-box">
+                <h4>🚀 Future Goal</h4>
+                <p>Building clean, scalable, and practical software solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Skills</span>
+        <h2 class="section-title">Languages, Frameworks &amp; Tools</h2>
+        <p class="section-subtitle">Technologies I work with across programming, web development, and database
+          management.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">⚡</div>
+            <h3 class="category-title">Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">🎨</div>
+            <h3 class="category-title">Frontend Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">React.js</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">⚙️</div>
+            <h3 class="category-title">Backend Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express.js</span>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">🗄️</div>
+            <h3 class="category-title">Databases</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon">🛠️</div>
+            <h3 class="category-title">Developer Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Projects</span>
+        <h2 class="section-title">Things I've Built</h2>
+        <p class="section-subtitle">Practical projects developed during coursework and self-directed web development.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Responsive Business Website -->
+        <div class="project-card" data-project-id="business-website">
+          <div class="project-img-wrapper">
+            <video controls playsinline muted preload="metadata" class="project-card-video" poster="assets/project-business-website.svg">
+              <source src="certificates/NSUTDELHI/ResponsiveBusinessWebsite/WhatsApp Video 2026-09-06 at 1.39.46 AM.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="project-content">
+            <h3 class="project-name">Responsive Business Website</h3>
+            <p class="project-desc">A responsive business website designed to present business information, services and
+              contact details with a clean and user-friendly interface.</p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive Web Design</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('business-website')">🎬 Watch Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Website Architecture Analysis -->
+        <div class="project-card" data-project-id="architecture-analysis">
+          <div class="project-img-wrapper">
+            <video controls playsinline muted preload="metadata" class="project-card-video" poster="assets/project-architecture.svg">
+              <source src="certificates/WebsiteArchitectureAnalysis/WhatsApp Video 2026-09-06 at 1.46.32 AM.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="project-content">
+            <h3 class="project-name">Website Architecture Analysis</h3>
+            <p class="project-desc">A project focused on understanding and analysing website structure, components,
+              navigation and how different parts of a website work together.</p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">Web Architecture</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('architecture-analysis')">🎬 Watch Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Multi-Page College Event Manager -->
+        <div class="project-card" data-project-id="event-manager">
+          <div class="project-img-wrapper">
+            <video controls playsinline muted preload="metadata" class="project-card-video" poster="assets/project-event-manager.svg">
+              <source src="certificates/MultiPageEventCollageManager/WhatsApp Video 2026-09-06 at 1.46.31 AM.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="project-content">
+            <h3 class="project-name">Multi-Page College Event Manager</h3>
+            <p class="project-desc">A multi-page website for managing and presenting college events. It allows users to
+              browse events, view event details, access registration information and navigate through different
+              sections.</p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('event-manager')">🎬 Watch Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Shopping Website -->
+        <div class="project-card" data-project-id="shopping-website">
+          <div class="project-img-wrapper">
+            <video controls playsinline muted preload="metadata" class="project-card-video" poster="assets/project-business-website.svg">
+              <source src="certificates/Shopping website/20260905-2022-13.0333001.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="project-content">
+            <h3 class="project-name">Shopping Website</h3>
+            <p class="project-desc">A feature-rich web-based e-commerce shopping platform providing interactive product catalogs, filtering capabilities, shopping cart interactions, and a clean modern user interface.</p>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">E-Commerce UI</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('shopping-website')">🎬 Watch Demo</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section (Using User's Real Certificate Images) -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Certifications</span>
+        <h2 class="section-title">Verified Certificates &amp; Credentials</h2>
+        <p class="section-subtitle">Click any certificate card to open and inspect the uncropped certificate image.</p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- Certificate 1: LinuxWorld Training Certificate -->
+        <div class="cert-card"
+          onclick="openLightbox('certificates/linuxpic.jpeg', 'LinuxWorld Industrial Training Certificate')">
+          <div class="cert-img-container">
+            <img src="certificates/linuxpic.jpeg" alt="LinuxWorld Industrial Training Certificate">
+            <span class="cert-zoom-hint">🔍 Expand Image</span>
+          </div>
+          <div class="cert-details">
+            <h3 class="cert-name">LinuxWorld Training Certificate</h3>
+            <p class="cert-org">LinuxWorld Informatics Pvt. Ltd.</p>
+            <p class="cert-date">Industrial Training</p>
+          </div>
+        </div>
+
+        <!-- Certificate 2: Computer Vision Certificate -->
+        <div class="cert-card"
+          onclick="openLightbox('certificates/computerCv.jpeg', 'Computer Vision / Technical Certificate')">
+          <div class="cert-img-container">
+            <img src="certificates/computerCv.jpeg" alt="Computer Vision Certificate">
+            <span class="cert-zoom-hint">🔍 Expand Image</span>
+          </div>
+          <div class="cert-details">
+            <h3 class="cert-name">Computer Vision Certificate</h3>
+            <p class="cert-org">Technical Workshop / Program</p>
+            <p class="cert-date">AI &amp; Computer Vision</p>
+          </div>
+        </div>
+
+        <!-- Certificate 3: Campus Crew Certificate -->
+        <div class="cert-card" onclick="openLightbox('certificates/campuxcrew.jpeg', 'Campus Crew Certificate')">
+          <div class="cert-img-container">
+            <img src="certificates/campuxcrew.jpeg" alt="Campus Crew Certificate">
+            <span class="cert-zoom-hint">🔍 Expand Image</span>
+          </div>
+          <div class="cert-details">
+            <h3 class="cert-name">Campus Crew Certificate</h3>
+            <p class="cert-org">GLA University Event Community</p>
+            <p class="cert-date">Technical / Event Participation</p>
+          </div>
+        </div>
+
+        <!-- Certificate 4: Nexus Quiz Certificate -->
+        <div class="cert-card" onclick="openLightbox('certificates/nexusquiz.jpeg', 'Nexus Quiz Certificate')">
+          <div class="cert-img-container">
+            <img src="certificates/nexusquiz.jpeg" alt="Nexus Quiz Certificate">
+            <span class="cert-zoom-hint">🔍 Expand Image</span>
+          </div>
+          <div class="cert-details">
+            <h3 class="cert-name">Nexus Quiz Certificate</h3>
+            <p class="cert-org">Technical Quiz Competition</p>
+            <p class="cert-date">Academic Achievement</p>
+          </div>
+        </div>
+
+        <!-- Certificate 5: Xcalate Certificate -->
+        <div class="cert-card" onclick="openLightbox('certificates/xcalate.jpeg', 'Xcalate Technical Certificate')">
+          <div class="cert-img-container">
+            <img src="certificates/xcalate.jpeg" alt="Xcalate Certificate">
+            <span class="cert-zoom-hint">🔍 Expand Image</span>
+          </div>
+          <div class="cert-details">
+            <h3 class="cert-name">Xcalate Certificate</h3>
+            <p class="cert-org">Technical Event / Competition</p>
+            <p class="cert-date">Participation</p>
+          </div>
+        </div>
+
+        <!-- Certificate 6: Oneline Certificate -->
+        <div class="cert-card" onclick="openLightbox('certificates/oneline.jpeg', 'Technical Certificate')">
+          <div class="cert-img-container">
+            <img src="certificates/oneline.jpeg" alt="Technical Certificate">
+            <span class="cert-zoom-hint">🔍 Expand Image</span>
+          </div>
+          <div class="cert-details">
+            <h3 class="cert-name">Technical Workshop Certificate</h3>
+            <p class="cert-org">Coding &amp; Software Development</p>
+            <p class="cert-date">Technical Credential</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hackathons & Technical Events Section (Using Real Event Images) -->
+  <section class="section section-alt" id="hackathons">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hackathons &amp; Events</span>
+        <h2 class="section-title">Participation &amp; Technical Events</h2>
+        <p class="section-subtitle">Collaborative hackathons and technical events I've participated in. Click any photo
+          to enlarge.</p>
+      </div>
+
+      <div class="hackathons-grid">
+
+        <!-- Hackathon 1: HackIntruxion (INTRUSION X SE) -->
+        <div class="hackathon-card">
+          <div class="hackathon-gallery three-img">
+            <div class="gallery-item"
+              onclick="openLightbox('photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-09-06 at 12.12.07 AM.jpeg', 'INTRUSION X SE Hackathon Certificate')">
+              <img src="photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-09-06 at 12.12.07 AM.jpeg" alt="INTRUSION X SE Certificate">
+            </div>
+            <div class="gallery-item"
+              onclick="openLightbox('photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-09-06 at 12.12.30 AM.jpeg', 'HackIntruxion Hacking Session')">
+              <img src="photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-09-06 at 12.12.30 AM.jpeg" alt="HackIntruxion Hacking Session">
+            </div>
+            <div class="gallery-item"
+              onclick="openLightbox('photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-08-24 at 1.09.18 AM.jpeg', 'HackIntruxion Team &amp; Mentorship')">
+              <img src="photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-08-24 at 1.09.18 AM.jpeg" alt="HackIntruxion Mentorship Session">
+            </div>
+          </div>
+          <div class="hackathon-content">
+            <div class="hackathon-header">
+              <h3 class="hackathon-title">INTRUSION X SE</h3>
+              <span class="participation-tag">Participation</span>
+            </div>
+            <p class="hackathon-org">Cyberonites | GLA University</p>
+            <p class="hackathon-desc">
+              Participated in INTRUSION X SE, a 36-hour cybersecurity technical hackathon emphasizing practical security skills, network defense, vulnerability analysis, and awareness across multiple security domains.
+            </p>
+            <div class="hackathon-tags">
+              <span class="tech-tag">Cybersecurity</span>
+              <span class="tech-tag">36-Hour Hackathon</span>
+              <span class="tech-tag">Practical Security</span>
+              <span class="tech-tag">GLA University</span>
+            </div>
+            <div class="hackathon-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openLightbox('photo/hackJaipur/hackIntruxion/WhatsApp Image 2026-09-06 at 12.12.07 AM.jpeg', 'INTRUSION X SE Certificate')">
+                🔍 View Certificate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2: Convocation Appreciation Letter -->
+        <div class="hackathon-card">
+          <div class="hackathon-gallery">
+            <div class="gallery-item"
+              onclick="openLightbox('certificates/AppreciationLetter/WhatsApp Image 2026-09-06 at 12.47.12 AM.jpeg', 'GLA University Convocation Appreciation Letter')">
+              <img src="certificates/AppreciationLetter/WhatsApp Image 2026-09-06 at 12.47.12 AM.jpeg" alt="GLA University Appreciation Letter">
+            </div>
+            <div class="gallery-item"
+              onclick="openLightbox('certificates/AppreciationLetter/WhatsApp Image 2026-09-06 at 12.47.29 AM.jpeg', '14th Convocation Ceremony Appreciation Moment')">
+              <img src="certificates/AppreciationLetter/WhatsApp Image 2026-09-06 at 12.47.29 AM.jpeg" alt="Convocation Ceremony Awarding Moment">
+            </div>
+          </div>
+          <div class="hackathon-content">
+            <div class="hackathon-header">
+              <h3 class="hackathon-title">14th Convocation Ceremony</h3>
+              <span class="participation-tag appreciation">Appreciation Letter</span>
+            </div>
+            <p class="hackathon-org">GLA University, Mathura • Dec 03, 2025</p>
+            <p class="hackathon-desc">
+              Awarded an official Appreciation Letter by Vice-Chancellor Prof. Anup Kumar Gupta for commendable contribution and efficient coordination of Dais Management during the 14th Convocation Ceremony of GLA University.
+            </p>
+            <div class="hackathon-tags">
+              <span class="tech-tag">Dais Management</span>
+              <span class="tech-tag">Event Leadership</span>
+              <span class="tech-tag">GLA University</span>
+              <span class="tech-tag">Dec 2025</span>
+            </div>
+            <div class="hackathon-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openLightbox('certificates/AppreciationLetter/WhatsApp Image 2026-09-06 at 12.47.12 AM.jpeg', 'GLA University Appreciation Letter')">
+                📄 View Letter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3: NSUT Delhi Python Codathon -->
+        <div class="hackathon-card">
+          <div class="hackathon-gallery four-img">
+            <div class="gallery-item"
+              onclick="openLightbox('certificates/NSUTDELHI/ONELINE.jpeg', 'NSUT Delhi One Shot One Line Codathon Certificate')">
+              <img src="certificates/NSUTDELHI/ONELINE.jpeg" alt="NSUT Delhi Python Codathon Certificate">
+            </div>
+            <div class="gallery-item"
+              onclick="openLightbox('certificates/NSUTDELHI/WhatsApp Image 2026-09-06 at 12.45.09 AM.jpeg', 'NSUT Delhi Campus Entrance')">
+              <img src="certificates/NSUTDELHI/WhatsApp Image 2026-09-06 at 12.45.09 AM.jpeg" alt="NSUT Delhi Campus">
+            </div>
+            <div class="gallery-item"
+              onclick="openLightbox('certificates/NSUTDELHI/WhatsApp Image 2026-09-06 at 12.45.48 AM.jpeg', 'NSUT Delhi Codathon Venue')">
+              <img src="certificates/NSUTDELHI/WhatsApp Image 2026-09-06 at 12.45.48 AM.jpeg" alt="NSUT Codathon Hall">
+            </div>
+          </div>
+          <div class="hackathon-content">
+            <div class="hackathon-header">
+              <h3 class="hackathon-title">One Shot, One Line (Codathon)</h3>
+              <span class="participation-tag">Participation</span>
+            </div>
+            <p class="hackathon-org">Netaji Subhas University of Technology (NSUT), Delhi • Nov 04, 2025</p>
+            <p class="hackathon-desc">
+              Traveled to NSUT Delhi and participated in "One Shot, One Line", a competitive Python Codathon held during INNOVISION'25, applying algorithmic logic and rapid Python problem-solving techniques.
+            </p>
+            <div class="hackathon-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NSUT Delhi</span>
+              <span class="tech-tag">INNOVISION'25</span>
+              <span class="tech-tag">Nov 2025</span>
+            </div>
+            <div class="hackathon-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openLightbox('certificates/NSUTDELHI/ONELINE.jpeg', 'NSUT Delhi One Shot One Line Codathon Certificate')">
+                🔍 View Certificate
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4: Jaipur Hackathon (LNMIIT) -->
+        <div class="hackathon-card">
+          <div class="hackathon-gallery three-img">
+            <div class="gallery-item"
+              onclick="openLightbox('photo/hackJaipur/jaipurdevanshi.jpeg', 'Jaipur Hackathon Participation Photo')">
+              <img src="photo/hackJaipur/jaipurdevanshi.jpeg" alt="Jaipur Hackathon Team Photo">
+            </div>
+            <div class="gallery-item" onclick="openLightbox('photo/hackJaipur/lnmiit.jpeg', 'LNMIIT Hackathon Venue')">
+              <img src="photo/hackJaipur/lnmiit.jpeg" alt="LNMIIT Hackathon Photo 1">
+            </div>
+            <div class="gallery-item"
+              onclick="openLightbox('photo/hackJaipur/WhatsApp Image 2026-08-24 at 1.16.14 AM.jpeg', 'Jaipur Hackathon Badge')">
+              <img src="photo/hackJaipur/WhatsApp Image 2026-08-24 at 1.16.14 AM.jpeg" alt="Jaipur Hackathon Photo 2">
+            </div>
+          </div>
+          <div class="hackathon-content">
+            <div class="hackathon-header">
+              <h3 class="hackathon-title">Jaipur Hackathon (LNMIIT)</h3>
+              <span class="participation-tag">Participation</span>
+            </div>
+            <p class="hackathon-org">LNMIIT Jaipur</p>
+            <p class="hackathon-desc">
+              Participated in the Jaipur Hackathon hosted at LNMIIT. Gained experience in team dynamics, rapid idea brainstorming, and presenting project concepts to peer reviewers.
+            </p>
+            <div class="hackathon-tags">
+              <span class="tech-tag">LNMIIT Jaipur</span>
+              <span class="tech-tag">Prototyping</span>
+              <span class="tech-tag">Teamwork</span>
+            </div>
+            <div class="hackathon-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openLightbox('photo/hackJaipur/jaipurdevanshi.jpeg', 'Jaipur Hackathon Participation Photo')">
+                📷 View Event Gallery
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Experience Section -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic &amp; Training</span>
+        <h2 class="section-title">Education &amp; Experience</h2>
+        <p class="section-subtitle">Formal education background and hands-on industrial training experience.</p>
+      </div>
+
+      <div class="dual-grid">
+        <!-- Education Card (Includes Schooling) -->
+        <div class="info-card-block">
+          <h3 class="block-title">
+            <span>🎓</span> Education
+          </h3>
+
+          <div class="timeline-list">
+            <!-- B.Tech -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <h4 class="timeline-degree">B.Tech / Undergraduate</h4>
+              <p class="timeline-institution">Computer Science Engineering — GLA University</p>
+              <p class="timeline-period">Currently Pursuing</p>
+              <p class="timeline-detail">
+                Studying core Computer Science subjects including Data Structures, Algorithms, Web Technologies,
+                Database Systems, and Object-Oriented Programming.
+              </p>
+            </div>
+
+            <!-- Class 12th -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <h4 class="timeline-degree">Class 12th (Senior Secondary)</h4>
+              <p class="timeline-institution">St. Mary's Senior Secondary School, Rampur</p>
+              <p class="timeline-period">Completed</p>
+              <p class="timeline-detail">
+                Senior Secondary education with focus on Science stream subjects.
+              </p>
+            </div>
+
+            <!-- Class 10th -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <h4 class="timeline-degree">Class 10th (Secondary)</h4>
+              <p class="timeline-institution">St. Mary's Senior Secondary School, Rampur</p>
+              <p class="timeline-period">Completed</p>
+              <p class="timeline-detail">
+                Secondary school education with strong academic foundation in Science and Mathematics.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Training / Experience Card -->
+        <div class="info-card-block">
+          <h3 class="block-title">
+            <span>💼</span> Training &amp; Experience
+          </h3>
+
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <h4 class="timeline-degree">Summer Training / Industrial Training</h4>
+              <p class="timeline-institution">LinuxWorld Informatics Pvt. Ltd.</p>
+              <p class="timeline-period">Summer Training Program</p>
+              <p class="timeline-detail">
+                Completed hands-on industrial training focused on core Linux environment concepts, command-line usage,
+                and practical software development principles under guided mentorship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">Feel free to reach out for opportunities, internships, or queries.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details -->
+        <div class="contact-info-card">
+          <h3 class="contact-info-title">Let's Connect</h3>
+          <p class="contact-info-desc">
+            I am open to discussing internship opportunities, web development projects, and learning recommendations.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method-item">
+              <div class="method-icon">✉️</div>
+              <div>
+                <div class="method-label">Email</div>
+                <a href="mailto:devanshigoyal3030@example.com" class="method-value">devanshi.goyal@example.com</a>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="method-icon">💼</div>
+              <div>
+                <div class="method-label">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/devanshi-goyal-539177380?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                  target="_blank" rel="noopener noreferrer" class="method-value">linkedin.com/in/devanshigoyal</a>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="method-icon">🐙</div>
+              <div>
+                <div class="method-label">GitHub</div>
+                <a href="https://github.com/devanshigoyal3030-lgtm" target="_blank" rel="noopener noreferrer"
+                  class="method-value">github.com/devanshigoyal</a>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="method-icon">🧠</div>
+              <div>
+                <div class="method-label">LeetCode</div>
+                <a href="https://leetcode.com/u/Devanshigoyal_30/" target="_blank" rel="noopener noreferrer"
+                  class="method-value">leetcode.com/devanshigoyal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="user-name" class="form-label">Your Name</label>
+              <input type="text" id="user-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label for="user-email" class="form-label">Your Email</label>
+              <input type="email" id="user-email" class="form-input" placeholder="e.g. rahul@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="user-message" class="form-label">Message</label>
+              <textarea id="user-message" class="form-textarea" placeholder="Write your message here..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-text">&copy; 2026 Devanshi Goyal. Built with clean HTML, CSS, &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal Popup -->
+  <div class="modal-overlay" id="project-modal" onclick="closeModalOnOverlay(event, 'project-modal')">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
+      <div class="modal-body">
+        <div class="modal-img-container">
+          <img src="" id="modal-project-img" alt="Project Screenshot Preview">
+        </div>
+        <h3 id="modal-project-title" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;"></h3>
+        <p id="modal-project-desc" style="color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6;"></p>
+
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary);">Technologies Used:
+        </h4>
+        <div id="modal-project-tech" class="project-tech-stack" style="margin-bottom: 1.25rem;"></div>
+
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary);">Key Features:</h4>
+        <ul id="modal-project-features"
+          style="margin-bottom: 1.5rem; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7;"></ul>
+
+        <div class="project-actions" id="modal-project-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificate & Hackathon Lightbox Modal -->
+  <div class="modal-overlay lightbox-modal" id="lightbox-modal" onclick="closeModalOnOverlay(event, 'lightbox-modal')">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeLightbox()">&times;</button>
+      <div class="lightbox-content">
+        <div class="lightbox-img-wrapper">
+          <img src="" id="lightbox-img" alt="Expanded Certificate / Photo View">
+        </div>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
