@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Layout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px;
+            background-color: #f4f7fc;
+            color: #263238;
+        }
+
+        h2 {
+            text-align: center;
+            color: #273c75;
+            margin: 35px 0 20px;
+        }
+
+        /* 1. Sidebar Layout */
+        .layout {
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #dce3ee;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #273c75;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .sidebar p {
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .sidebar p:hover {
+            background: #40739e;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background: #edf4ff;
+            border-radius: 10px;
+        }
+
+        /* 2. Product Card */
+        .product {
+            width: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #e0e6ef;
+            border-radius: 15px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 5px 15px #dce3ee;
+            box-sizing: border-box;
+        }
+
+        .product img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            color: #273c75;
+        }
+
+        .price {
+            color: #16a085;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btn {
+            background: #273c75;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        /* 3. Three-Column Blog Layout */
+        .blog {
+            display: flex;
+            gap: 20px;
+        }
+
+        .column {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #dce3ee;
+            box-sizing: border-box;
+        }
+
+        .column img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 9px;
+        }
+
+        .column h3 {
+            color: #273c75;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .layout, .blog {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .product {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>1. Sidebar Layout</h2>
+
+    <div class="layout">
+        <div class="sidebar">
+            <h3>My Menu</h3>
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Services</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="content">
+            <h2>Welcome to My Website!</h2>
+            <p>Explore our latest products, articles and updates.</p>
+        </div>
+    </div>
+
+
+    <h2>2. Featured Product</h2>
+
+    <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+          alt="Wireless headphones">
+
+        <h3>Wireless Headphones</h3>
+        <p>Enjoy clear sound and stylish design.</p>
+        <p class="price">₹999</p>
+        <button class="btn">Buy Now</button>
+    </div>
+
+
+    <h2>3. Explore Our Blog</h2>
+
+    <div class="blog">
+
+        <div class="column">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+              alt="Technology">
+            <h3>Technology</h3>
+            <p>Discover new inventions and exciting tech trends.</p>
+        </div>
+
+        <div class="column">
+            <img
+              src="https://ecomuch.com/wp-content/uploads/2024/04/Creating-an-Inspiring-and-Functional-Classroom-Environment.jpg"
+              alt="Education">
+            <h3>Education</h3>
+            <p>Learn new skills and explore fresh ideas.</p>
+        </div>
+
+        <div class="column">
+            <img
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+              alt="Travel">
+            <h3>Travel</h3>
+            <p>Explore beautiful destinations around the world.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
