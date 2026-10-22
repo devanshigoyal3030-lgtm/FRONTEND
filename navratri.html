@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navratri Eligibility Checker</title>
+</head>
+<body>
+    <script>
+
+        let date1 = prompt("Enter the date of campus entry (11-19):");
+        date1 = Number(date1);
+
+        if (date1 >= 11 && date1 <= 19) {
+            alert("You are eligible for Navratri! 🎉");
+            document.write("<h2>Using if-else: Eligible for Navratri </h2>");
+        } else {
+            alert("You are NOT eligible for Navratri.");
+            document.write("<h2>Using if-else: Not eligible for Navratri </h2>");
+        }
+
+        document.write("<hr>");
+
+        let date2 = prompt("Enter the date for ternary check (11-19):");
+        date2 = Number(date2);
+
+        let message = (date2 >= 11 && date2 <= 19)
+            ? "Using ternary: Eligible for Navratri"
+            : "Using ternary: Not eligible for Navratri ";
+
+        alert(message);
+        document.write("<h2>" + message + "</h2>");
+
+    </script>
+</body>
+</html>
