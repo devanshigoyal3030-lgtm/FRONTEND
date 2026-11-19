@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+    body {
+    text-align: center;
+}
+
+#board {
+    width: 400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+</style>
+
+
+</head>
+<body>
+    <h1>CHESS BOARD</h1>
+    <div id="board">
+</div>
+
+   <script>
+let board = document.getElementById("board");
+
+for (let i = 1; i <= 8; i++) {
+
+    for (let j = 1; j <= 8; j++) {
+
+        let box = document.createElement("div");  // hamne naya div bnya hai html ke liye
+
+        box.className = "box";   // we are giving css styling 
+
+        if ((i + j) % 2 == 0) {    // aggaar number 2 se divisbile hai rem 0 soo white color otherwise black 
+            box.className = "box white";
+        }
+        else {
+            box.className = "box black";
+        }
+
+        board.appendChild(box);   // we are using this beacuse we are adding box to html   
+
+    }
+
+}
+    </script>
+</body>
+</html>
