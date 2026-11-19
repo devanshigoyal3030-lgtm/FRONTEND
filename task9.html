@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Programming</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Server Data Fetching</h2>
+
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <p id="result">Click the button to get data</p>
+
+    <script>
+
+        function fetchData() {
+
+            let result = document.getElementById("result");
+
+            result.innerText = "Loading...";
+
+            let promise = new Promise(function(resolve, reject) {
+
+                setTimeout(function() {
+
+                    resolve("Data received successfully!");
+
+                }, 3000);
+
+            });
+
+            promise.then(function(data) {
+
+                result.innerText = data;
+
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>
