@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Finder</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: #eef3f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: #2457a6;
+        }
+
+        input {
+            width: 60%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #2457a6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: navy;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .university {
+            background-color: #f1f5ff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>University Finder</h1>
+
+        <p>Enter a country name to find universities</p>
+
+        <input type="text" id="country"
+        placeholder="Enter country (e.g. India)">
+
+        <button onclick="searchUniversity()">Search</button>
+
+        <p id="message"></p>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        async function searchUniversity() {
+
+            let country = document.getElementById("country").value.trim();
+
+            let result = document.getElementById("result");
+            let message = document.getElementById("message");
+
+            if (country == "") {
+                message.innerText = "Please enter a country name";
+                result.innerHTML = "";
+                return;
+            }
+
+            message.innerText = "Loading universities...";
+            result.innerHTML = "";
+
+            let url = "http://universities.hipolabs.com/search?country="
+                      + encodeURIComponent(country);
+
+            try {
+
+                let response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error("Unable to fetch data");
+                }
+
+                let data = await response.json();
+
+                if (data.length == 0) {
+                    message.innerText = "No universities found!";
+                    return;
+                }
+
+                message.innerText = "Universities found: " + data.length;
+
+                data.forEach(function(university) {
+
+                    let box = document.createElement("div");
+                    box.className = "university";
+
+                    let name = document.createElement("h3");
+                    name.innerText = university.name;
+
+                    let link = document.createElement("a");
+
+                    if (university.web_pages.length > 0) {
+                        link.href = university.web_pages[0];
+                        link.innerText = "Visit Website";
+                        link.target = "_blank";
+                    }
+                    else {
+                        link.innerText = "Website not available";
+                    }
+
+                    box.appendChild(name);
+                    box.appendChild(link);
+
+                    result.appendChild(box);
+
+                });
+
+            }
+
+            catch(error) {
+                message.innerText = "Error fetching data. Please try again.";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
